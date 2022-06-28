@@ -28,6 +28,7 @@ exports.handler = async (event) => {
                 "Content-Type": "application/json"
             },
             body: output,
+            //body: JSON.stringify(bitcoin_price),
         };
     } catch (error) {
         console.error(error);

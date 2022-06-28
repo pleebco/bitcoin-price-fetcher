@@ -5,9 +5,8 @@ const port = process.env.PORT || 8080;
 
 const handler = async (req, res) => {
     const url = new URL(req.url, `http://${req.headers.host}`);
-    const slug = url.searchParams.get("slug");
-    const pretty = url.searchParams.get("pretty");
-    const data = await lamdba.handler({ queryStringParameters: { slug, pretty } });
+    const currency = url.searchParams.get("currency");
+    const data = await lamdba.handler({ queryStringParameters: { currency } });
 
     res.writeHead(data.statusCode, data.headers);
     res.end(data.body);

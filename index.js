@@ -20,7 +20,7 @@ exports.handler = async (event) => {
     try {
         const bitcoin_price = await getBitcoinPrice();
 
-        const output = "Bitcoin price in " + currency + ": " + bitcoin_price.bpi[currency].rate;
+        const output = process.env.TOKEN + ". Bitcoin price in " + currency + ": " + bitcoin_price.bpi[currency].rate;
 
         return {
             statusCode: 200,

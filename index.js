@@ -14,8 +14,8 @@ const getBitcoinPrice = () => {
 exports.handler = async (event) => {
     const queryParams = event["queryStringParameters"];
     let currency = "USD";
-    if (queryParams && queryParams.hasOwn("currency") && queryParams.get("currency") !== "") {
-        currency = queryParams.get("currency");
+    if (queryParams && queryParams.hasOwnProperty("currency") && queryParams.currency !== "" && queryParams.currency !== undefined) {
+        currency = queryParams.currency;
     }
 
     try {

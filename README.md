@@ -13,12 +13,12 @@ This is sample project you can use to create your own repo for a Lambda Function
 
 - Create the environment variables in the corresponding AWS Lambda Function Configuration
 - Add `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` to your repository's Github Action Secrets in order to deploy.
-- Edit the last line in .github/workflows/main.yml to use the correct function name.
+- Edit the last line in [.github/workflows/main.yml](.github/workflows/main.yml) to use the correct function name.
 
 ## Troubleshooting
 
 - If you're having trouble testing locally, your port 8080 might be busy, you can change that in local.js
-- Make sure the AWS Region in .github/workflows/main.yml is the correct one
+- Make sure the AWS Region in [.github/workflows/main.yml](.github/workflows/main.yml) is the correct one
 
 ## FAQ
 

@@ -29,4 +29,4 @@ jobs:
           npm i -g @vercel/ncc
           ncc build
           zip -j deploy.zip ./dist/*
-          aws lambda update-function-code --function-name=lookup --zip-file=fileb://deploy.zip
+          aws lambda update-function-code --function-name=bitcoin --zip-file=fileb://deploy.zip

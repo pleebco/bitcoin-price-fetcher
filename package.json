@@ -1,0 +1,25 @@
+{
+  "name": "sales-lookup-worder",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "eslint . --ext .js",
+    "lint:fix": "npm run lint -- --fix",
+    "dev": "nodemon local.js"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.6"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "dotenv": "^16.0.1",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.18",
+    "prettier": "^2.6.2",
+    "typescript": "4.6.4"
+  }
+}

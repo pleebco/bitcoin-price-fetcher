@@ -12,15 +12,16 @@ const getBitcoinPrice = () => {
 };
 
 exports.handler = async (event) => {
-    let currency = event["queryStringParameters"]["currency"];
-    if (currency === undefined) {
-        currency = "USD";
+    const queryParams = event["queryStringParameters"];
+    let currency = "USD";
+    if (queryParams && queryParams.hasOwn("currency") && queryParams.get("currency") !== "") {
+        currency = queryParams.get("currency");
     }
 
     try {
         const bitcoin_price = await getBitcoinPrice();
 
-        const output = `${process.env.TOKEN}. Bitcoin price in ${currency} ${bitcoin_price.bpi[currency].rate}`;
+        const output = `${process.env.TOKEN}. Bitcoin price in ${currency} in ${bitcoin_price.bpi[currency].rate}`;
 
         return {
             statusCode: 200,

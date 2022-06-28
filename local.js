@@ -14,4 +14,4 @@ const handler = async (req, res) => {
 
 const server = http.createServer(handler);
 // eslint-disable-next-line no-console
-server.listen(port, () => console.log("Server running on port " + port));
+server.listen(port, () => console.log(`Server running on port ${port}`));
